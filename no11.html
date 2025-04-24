@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMOS NAMORAR, MINHA AMADA?</title>
+    <style>
+        body {
+            background: url('https://criticalhits.com.br/wp-content/uploads/2022/09/The-Proposal-Proposal.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .painel {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 3px solid rgb(226, 0, 0);
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        button {
+            height: 50px;
+            width: 100px;
+            font-size: 16px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        #nao {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Gostaria de ser minha "Amy Farrah Fowler" daqui até a eternidade?</h1>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXR2cjdlYTlpYWNzbGdvNGNuanV0YWd6dTFmbXR5djNjeDhoOGtoOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lzo28jtMyK4RNfP2zf/giphy.gif" alt="">
+        <h2>Aceita namorar comigo?</h2>
+        <div class="botoes">
+            <a href="https://www.youtube.com/shorts/pBlQQmSa4iU"><button id="sim">Sim!</button></a>
+            <button onmouseover="fuja()" id="nao">Não!</button>
+        </div>
+    </div>
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao");
+            var larguraJanela = window.innerWidth - botaoNao.offsetWidth;
+            var alturaJanela = window.innerHeight - botaoNao.offsetHeight;
+            var aleatorioX = Math.floor(Math.random() * larguraJanela);
+            var aleatorioY = Math.floor(Math.random() * alturaJanela);
+            botaoNao.style.position = "absolute";
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
